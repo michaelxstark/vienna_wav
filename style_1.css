@@ -1,0 +1,133 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+body {
+  margin: 0.5%;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  background-color: FloralWhite;
+  padding: 1%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section.intro {
+  float: left;
+  width: 45%;
+  padding: 20px;
+  margin-top: 3%;
+  max-width: 50%;
+  text-align: justify;
+}
+
+section.controls, section.options {
+  float: right;
+  width: 50%;
+  padding: 1%;
+  margin-top: 1%;
+}
+
+section.options{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sliders{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0%;
+  margin-top: 2%;
+  width: 100%;
+  background-color: #F0F8FF;
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  /*width: 100%; /* Full-width */
+  /*height: 25px; /* Specified height */
+  /*background: #F0F8FF; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+p {
+  font-size: 1.15em;
+  line-height: 1.5em;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  margin-right: 1%;
+}
+
+button {
+  background-color: #F0F8FF;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #7FFFD4;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 1%px;
+}
+
+.displays {
+  font-size: 0.75em;
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.selector {
+  margin-bottom: 1%;
+  margin-top: -4%;
+  font-size: 0.75em;
+  height: 100%;
+  color: black;
+  border: 3%;
+  padding: 0.5%;
+  text-align: center;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+select {
+  width: 100%;
+  height: 50%;
+  padding: 1%.25;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.125em;
+  background-color: white;
+}
+
+
+#mycanvas {
+  float: right;
+  margin-top: 0.5%;
+  margin-right: 7%;
+}

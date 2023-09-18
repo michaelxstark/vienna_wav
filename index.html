@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style_1.css">
+  <script src="https://unpkg.com/tone"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+  <title>Viennese Wheater Data Sonification</title>
+  <meta name="description" content="Vienna_Son">
+  <meta name="keywords" content="Viennese Wheater Data Sonification">
+</head>
+<body>
+  <header>
+    <h1>Viennese Weather Data Sonification</h1>
+  </header>
+
+  <section class="intro">
+    <p>You are about to experience an audiovisual representation of data.
+      The underlying data comprises the average temperature per year in Vienna since 1873.
+      You will observe a sphere and hear various sounds.
+      The sphere will become bigger and brighter red as the average temperature per year increases.
+      The primary sound features a polyphonic synthesizer, which will become louder
+      as the average temperature rises.
+      Additionally, the filter will open or close in response to the temperature.
+      As a third feature, for every 0.5&deg;C above the lowest measured temperature,
+      a new note will be added to the chord.
+      When the temperature is 2&deg;C above the lowest measured temperature,
+      a highpass filtered noise will be included.
+      At 3&deg;C above the lowest measured temperature,
+      a lowpass filtered noise will be introduced.
+      If the temperature exceeds 4&deg;C above the lowest measured temperature,
+      a synthesized kickdrum will be added.
+      To initiate the audiovisual display of the data,
+      you must first activate the audio in your browser by clicking the "activate audio" button.
+      Afterwards, you can simply start and stop the display by using the corresponding buttons.
+      Furthermore, you have the option to select a desired timeframe for inspection,
+      adjust the animation speed, choose different waveforms for the main synthesizer
+      and the scale from which the notes for the chord are selected.
+    </p>
+  </section>
+
+ <section class="controls">
+  <div class="buttons">
+    <button id="b1" onclick="startAudio()">Activate Audio</button>
+    <button id="b2" onclick="startAudioVisLoop()">Start AV Display</button>
+    <button id="b3" onclick="stopTone()">Stop AV Display</button>
+  </div>
+
+  <div class="sliders">
+    <input type="range" min="12" max="32" value="17" class="slider" id="Speed">
+
+    <input type="range" min="1873" max="2022" value="1873" class="slider" id="minYear">
+
+    <input type="range" min="1873" max="2022" value="2022" class="slider" id="maxYear">
+
+  </div>
+
+  <div class="displays">
+    <p id="speedDisplay">Speed 17</p>
+    <p id="minYearDisplay">minYear 1873</p>
+    <p id="maxYearDisplay">maxYear 2022</p>
+  </div>
+  </section>
+
+  <section class="options">
+    <div class="selector">
+    <label for="waveForms">Choose a waveform:</label>
+      <select id="waveForms">
+        <option value="sawtooth" selected>sawtooth (Default)</option>
+        <option value="pulse">pulse</option>
+        <option value="triangle">triangle</option>
+      </select>
+    </div>
+
+
+    <div class="selector">
+    <label for="tonality">Choose a scale:</label>
+      <select id="tonality">
+        <option value="minor" selected>aeolian (Default)</option>
+        <option value="phrygian">phrygian</option>
+        <option value="lydian">lydian</option>
+      </select>
+    </div>
+  </section>
+
+  <div class="canvas-container">
+  </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
