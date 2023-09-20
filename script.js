@@ -97,7 +97,7 @@ let synth;
 
 function setup() {
 
-  let canvas = createCanvas(500, 500, WEBGL);
+  let canvas = createCanvas(windowWidth * 0.5, windowHeight * 0.5, WEBGL);
   canvas.id('mycanvas');
   textFont(newFont);
   textSize(18);
